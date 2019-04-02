@@ -9,7 +9,7 @@
 %>
 
 <form action="<%= action_url %>" method="post">
-  <% if type == :edit %>
+  <% if cat.persisted? %>
     <input type="hidden" name="_method" value="patch">
     <% end %>
       <label>Name:
@@ -23,6 +23,9 @@
     
       <label>Color:
           <select name="cat[color]">
+            <% unless cat.persisted? %>
+            <option selected="selected" disabled="disabled">--select a color--</option>
+            <% end%>
             <% Cat::COLORS.each do |color| %>
               <option <%= cat.color == color ? "selected" : "" %> value="<%=color%>"><%=color.titleize%></option>
             <% end %>

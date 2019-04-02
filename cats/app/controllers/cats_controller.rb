@@ -14,6 +14,7 @@ class CatsController < ApplicationController
   end
 
   def new # goes to create
+    @cat = Cat.new()
     render 'new'
   end
 
