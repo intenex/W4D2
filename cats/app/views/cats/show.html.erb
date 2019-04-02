@@ -1,0 +1,25 @@
+<h1><%= @cat.name %></h1>
+
+<table>
+  <tr>
+    <th>Attribute</th>
+    <th>Value</th>
+  </tr>
+    <tr>
+      <td>age</td>
+      <td>about <%= @cat.age %> years</td>
+    </tr>
+    <tr>
+      <td>birth_date</td>
+      <td><%= @cat.birth_date%></td>
+    </tr>
+    <tr>
+      <td>color</td>
+      <td><%= @cat.color%></td>
+    </tr>
+    <tr>
+      <td>sex</td>
+      <td><%= @cat.sex%></td>
+    </tr>
+</table>
+<p><%=@cat.description%></p>
