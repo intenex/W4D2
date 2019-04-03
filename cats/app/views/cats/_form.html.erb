@@ -1,4 +1,4 @@
-<%  if type == :edit
+<%  if cat.persisted?
       action_url = cat_url(cat)
       submit_value = "Edit the cat"
     else
